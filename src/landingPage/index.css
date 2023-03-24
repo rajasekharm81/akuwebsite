@@ -1,0 +1,5 @@
+.landingMainContainer{
+    background-image: url("../assects/subtle-prism.svg");
+    background-size: cover;
+    height: 100vh;
+}
