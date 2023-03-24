@@ -4,8 +4,9 @@ import Navbar from "../navbar";
 
 import "./index.css";
 
-import kesariimagebg from "../assects/kesariimagebg.png";
+// import kesariimagebg from "../assects/kesariimagebg.png";
 import vc from "../assects/vc.png";
+import ka from "../assects/ka.png";
 
 class Home extends Component {
   state = { showAbout: false };
@@ -18,9 +19,15 @@ class Home extends Component {
           <Navbar />
           <div className="h-100 col-12 d-flex flex-column justify-content-center align-items-center">
             <h1>Welcome to Andhra Kesari University</h1>
+            <h3>(Site is Under Development)</h3>
             <img
-              style={{ position: "absolute", opacity: 0.3 }}
-              src={kesariimagebg}
+              style={{
+                position: "absolute",
+                opacity: 0.3,
+                height: "80vh",
+              }}
+              // src={kesariimagebg}
+              src={ka}
               alt="bgmain"
               draggable="false"
             />

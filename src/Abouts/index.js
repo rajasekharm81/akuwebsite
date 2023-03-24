@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Navigate } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import vc from "../assects/vc.png";
+
 export default class Vc extends Component {
   state = { home: false };
   componentDidMount() {

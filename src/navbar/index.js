@@ -2,6 +2,8 @@ import { Component } from "react";
 // import { GiHamburgerMenu } from "react-icons/gi";
 import "./index.css";
 
+import logob from "../assects/logob.jpg";
+
 const navItems = [
   {
     mh: "About Us",
@@ -107,7 +109,7 @@ export default class Navbar extends Component {
     const { hoveredId } = this.state;
     return (
       <nav className="d-flex flex-row bg-dark text-white justify-content-between col-12">
-        <p className="col-2 ">logo</p>
+        <img style={{ width: "5vw", height: "5vw" }} src={logob} alt="logo" />
         <ul className="col-10 d-flex justify-content-end ml-auto flex-row align-items-center">
           {navItems.map((each) => (
             <li
@@ -125,7 +127,7 @@ export default class Navbar extends Component {
                     ? "d-block hoveredDropDown text-left"
                     : "d-none"
                 }
-                style={{zIndex:1}}
+                style={{ zIndex: 1 }}
                 onMouseLeave={this.unhover}>
                 {each.dropItems.map((subeach) => (
                   <li className="listItem p-1 " id={subeach}>
