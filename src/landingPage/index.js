@@ -1,12 +1,18 @@
 import { Component } from "react";
 import { Navigate } from "react-router-dom";
 import Navbar from "../navbar";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import "./index.css";
 
 // import kesariimagebg from "../assects/kesariimagebg.png";
 import vc from "../assects/vc.png";
 import ka from "../assects/ka.png";
+
+import a from "../assects/carosalImages/a.jpg";
+import b from "../assects/carosalImages/b.jpg";
+import c from "../assects/carosalImages/c.jpg";
 
 class Home extends Component {
   state = { showAbout: false };
@@ -18,12 +24,31 @@ class Home extends Component {
         <div className="landingMainContainer">
           <Navbar />
           <div className="h-100 col-12 d-flex flex-column justify-content-center align-items-center">
+            <div>
+              <Carousel
+                showThumbs={false}
+                autoPlay
+                interval={3000}
+                infiniteLoop>
+                <div>
+                  <img className="col-6" src={a} alt="carosal" />
+                </div>
+                <div>
+                  <img className="col-6" src={b} alt="carosal" />
+                </div>
+                <div>
+                  <img className="col-6" src={c} alt="carosal" />
+                </div>
+              </Carousel>
+            </div>
             <h1>Welcome to Andhra Kesari University</h1>
             <h3>(Site is Under Development)</h3>
             <img
               style={{
                 position: "absolute",
-                opacity: 0.3,
+                top: 0,
+                right: 0,
+                opacity: 1,
                 height: "80vh",
               }}
               // src={kesariimagebg}
