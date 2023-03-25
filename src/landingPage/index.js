@@ -20,7 +20,7 @@ class Home extends Component {
     const { showAbout } = this.state;
     return (
       <>
-        {showAbout && <Navigate to="/about" />}
+        {showAbout && <Navigate to="aboutUs/governingBody" />}
         <div className="landingMainContainer">
           <Navbar />
           <div className="h-100 col-12 d-flex flex-column justify-content-center align-items-center">

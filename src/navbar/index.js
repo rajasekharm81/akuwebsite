@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Navigate } from "react-router-dom";
 // import { GiHamburgerMenu } from "react-icons/gi";
 import "./index.css";
 
@@ -96,7 +97,7 @@ const navItems = [
 ];
 
 export default class Navbar extends Component {
-  state = { hoveredId: "", showNavItems: false };
+  state = { hoveredId: "", showNavItems: false, navTo: "" };
 
   hover = (event) => {
     this.setState({ hoveredId: event.target.id });
@@ -105,40 +106,71 @@ export default class Navbar extends Component {
   unhover = () => {
     this.setState({ hoveredId: "" });
   };
+
+  Takenav = (event) => {
+    this.setState({ navTo: event.target.id });
+  };
+
+  navigator = () => {
+    const { navTo } = this.state;
+    switch (navTo) {
+      case "History":
+        return <Navigate to="aboutUs/history" />;
+      case "Vision and Mission":
+        return <Navigate to="aboutUs/Vision&Mission" />;
+      case "Governing Body":
+        return <Navigate to="aboutUs/governingBody" />;
+      case "University Act and Statutes":
+        return <Navigate to="aboutUs/UniversityAct" />;
+      case "Administration":
+        return <Navigate to="aboutUs/Administration" />;
+      case "Affiliated Colleges":
+        return <Navigate to="aboutUs/affliatedColleges" />;
+      default:
+        return null;
+    }
+  };
+
   render() {
     const { hoveredId } = this.state;
     return (
-      <nav className="d-flex flex-row bg-dark text-white justify-content-between col-12">
-        <img style={{ width: "5vw", height: "5vw" }} src={logob} alt="logo" />
-        <ul className="col-10 d-flex justify-content-end ml-auto flex-row align-items-center">
-          {navItems.map((each) => (
-            <li
-              className={
-                hoveredId === each.mh
-                  ? "navitem m-2 badge text-primary bg-white"
-                  : "m-2 badge"
-              }>
-              <p id={each.mh} onMouseOver={this.hover}>
-                {each.mh}
-              </p>
-              <ul
+      <>
+        {this.navigator()}
+        <nav className="d-flex flex-row bg-dark text-white justify-content-between col-12">
+          <img style={{ width: "5vw", height: "5vw" }} src={logob} alt="logo" />
+          <ul className="col-10 d-flex justify-content-end ml-auto flex-row align-items-center">
+            {navItems.map((each) => (
+              <li
                 className={
                   hoveredId === each.mh
-                    ? "d-block hoveredDropDown text-left"
-                    : "d-none"
-                }
-                style={{ zIndex: 1 }}
-                onMouseLeave={this.unhover}>
-                {each.dropItems.map((subeach) => (
-                  <li className="listItem p-1 " id={subeach}>
-                    - {subeach}
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </nav>
+                    ? "navitem m-2 badge text-primary bg-white"
+                    : "m-2 badge"
+                }>
+                <p id={each.mh} onMouseOver={this.hover}>
+                  {each.mh}
+                </p>
+                <ul
+                  className={
+                    hoveredId === each.mh
+                      ? "d-block hoveredDropDown text-left"
+                      : "d-none"
+                  }
+                  style={{ zIndex: 1 }}
+                  onMouseLeave={this.unhover}>
+                  {each.dropItems.map((subeach) => (
+                    <li
+                      onClick={this.Takenav}
+                      className="listItem p-1 "
+                      id={subeach}>
+                      - {subeach}
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </>
     );
   }
 }

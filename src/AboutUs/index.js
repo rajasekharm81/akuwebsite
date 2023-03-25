@@ -1,5 +1,7 @@
 import { Component } from "react";
 
+import act41991 from "../assects/act41991.pdf";
+
 export class History extends Component {
   render() {
     return (
@@ -45,56 +47,70 @@ export class History extends Component {
 }
 
 export class UniversityAct extends Component {
+  state = { showPdf: false };
   render() {
+    const { showPdf } = this.state;
     return (
-      <div className="text-white d-flex flex-column justify-content-center align-items-center col-12 p-5">
-        <div className="col-10 text-center">
-          <h1 className="mb-5">THE ANDHRA PRADESH UNIVERSITIES ACT, 1991</h1>
-          <h5>(Act No.4 0/1991)</h5>
-          <strong>
-            <p>Statement of Objects and Reasons</p>
-          </strong>
-          <div style={{ textAlign: "justify" }}>
-            <p>
-              At present there are six conventional Universities in the State,
-              each governed by a separate enactment. These Universities are the
-              Andhra University and Nagarjuna University in the Andhra Area of
-              the State, Sri Venkateswara University and Sri Krishnadevaraya
-              University in the Rayalaseema region, the Osmania University and
-              the Kakatiya University in the Telangana area of the State.The
-              provisions of the various Universities Acts governing the
-              aforesaid Universities are substantially the same with minor
-              variations here and there. Whenever there is a change in the
-              policy of the Government and an amendment is to be effected,it is
-              resulting in the amendment of all the Six Universities Acts,which
-              is contributing to legislative duplication. Further if any new
-              University is to be establishedwith the sameaims and objects,a
-              separate enactment has to be passed. To maintain uniformity of law
-              III respect of all the conventional Universities and to easily
-              establish any conventional University under the same enactment,
-              the Government have decided to enact a singlelawin place
-              ofSixUniversities Acts and to bring all the aforesaid
-              SixUniversities under new law.
-            </p>
-            <p>
-              Apart from the above aspect of uniformity in the law, the
-              ..Govemment have also decided to democratise the functioning of
-              the Universities by providing for elected element in the Board
-              ofManagement (earlier called as the ExecutiveCouncil) and in the
-              Academic Senate: it is also proposed to enlarge themembership of
-              the AcademicSenate by drawing persons having rich experience in
-              various fields in order to mould the Academic Senate into a highly
-              enlightened body.
-            </p>
-            <p>This Billseeks to give effect to the above decisions.</p>
-            <p>
-              Appended to L.A. Bill No. 37 of 1990 published in A.P. Gazette
-              Part-Tv (Ext.) dt. 11-10-1990.
-            </p>
+      <>
+        <div className="text-white d-flex flex-column justify-content-center align-items-center col-12 p-5">
+          <div className="col-10 text-center">
+            <h1 className="mb-5">THE ANDHRA PRADESH UNIVERSITIES ACT, 1991</h1>
+            <h5>(Act No.4 0/1991)</h5>
+            <strong>
+              <p>Statement of Objects and Reasons</p>
+            </strong>
+            <div style={{ textAlign: "justify" }}>
+              <p>
+                At present there are six conventional Universities in the State,
+                each governed by a separate enactment. These Universities are
+                the Andhra University and Nagarjuna University in the Andhra
+                Area of the State, Sri Venkateswara University and Sri
+                Krishnadevaraya University in the Rayalaseema region, the
+                Osmania University and the Kakatiya University in the Telangana
+                area of the State.The provisions of the various Universities
+                Acts governing the aforesaid Universities are substantially the
+                same with minor variations here and there. Whenever there is a
+                change in the policy of the Government and an amendment is to be
+                effected,it is resulting in the amendment of all the Six
+                Universities Acts,which is contributing to legislative
+                duplication. Further if any new University is to be
+                establishedwith the sameaims and objects,a separate enactment
+                has to be passed. To maintain uniformity of law III respect of
+                all the conventional Universities and to easily establish any
+                conventional University under the same enactment, the Government
+                have decided to enact a singlelawin place ofSixUniversities Acts
+                and to bring all the aforesaid SixUniversities under new law.
+              </p>
+              <p>
+                Apart from the above aspect of uniformity in the law, the
+                ..Govemment have also decided to democratise the functioning of
+                the Universities by providing for elected element in the Board
+                ofManagement (earlier called as the ExecutiveCouncil) and in the
+                Academic Senate: it is also proposed to enlarge themembership of
+                the AcademicSenate by drawing persons having rich experience in
+                various fields in order to mould the Academic Senate into a
+                highly enlightened body.
+              </p>
+              <p>This Billseeks to give effect to the above decisions.</p>
+              <p>
+                Appended to L.A. Bill No. 37 of 1990 published in A.P. Gazette
+                Part-Tv (Ext.) dt. 11-10-1990.
+              </p>
+            </div>
           </div>
+
+          <a href={act41991} target="_blank">
+            <button
+              // onClick={() =>
+              //   this.setState((prevState) => ({ showPdf: !prevState.showPdf }))
+              // }
+
+              className="btn">
+              Click here for More Information
+            </button>
+          </a>
         </div>
-        <button className="btn">Click here for More Information</button>
-      </div>
+      </>
     );
   }
 }
