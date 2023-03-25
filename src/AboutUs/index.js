@@ -49,7 +49,6 @@ export class History extends Component {
 export class UniversityAct extends Component {
   state = { showPdf: false };
   render() {
-    const { showPdf } = this.state;
     return (
       <>
         <div className="text-white d-flex flex-column justify-content-center align-items-center col-12 p-5">
@@ -99,7 +98,7 @@ export class UniversityAct extends Component {
             </div>
           </div>
 
-          <a href={act41991} target="_blank">
+          <a href={act41991} target="_blank" rel="noreferrer">
             <button
               // onClick={() =>
               //   this.setState((prevState) => ({ showPdf: !prevState.showPdf }))
