@@ -10,6 +10,8 @@ import {
   Administration,
   AffliatedColleges,
 } from "./AboutUs";
+
+import { Contact } from "./contact";
 class App extends Component {
   render() {
     return (
@@ -29,17 +31,18 @@ class App extends Component {
             element={<Administration />}
           />
           <Route
+            exact
+            path="aboutUs/affliatedColleges"
+            element={<AffliatedColleges />}
+          />
+          <Route exact path="contact" element={<Contact />} />
+          <Route
             path="*"
             element={
               <div>
                 <h1>Not found</h1>
               </div>
             }
-          />
-          <Route
-            exact
-            path="aboutUs/affliatedColleges"
-            element={<AffliatedColleges />}
           />
         </Routes>
       </BrowserRouter>
