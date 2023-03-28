@@ -40,6 +40,9 @@ class Home extends Component {
                 <div>
                   <img className="col-6" src={c} alt="carosal" />
                 </div>
+                <div>
+                  <img className="col-6" src={d} alt="carosal" />
+                </div>
               </Carousel>
             </div>
             <h1>Welcome to Andhra Kesari University</h1>
