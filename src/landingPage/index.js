@@ -13,6 +13,7 @@ import ka from "../assects/ka.png";
 import a from "../assects/carosalImages/a.jpg";
 import b from "../assects/carosalImages/b.jpg";
 import c from "../assects/carosalImages/c.jpg";
+import d from "../assects/carosalImages/d.jpg";
 
 class Home extends Component {
   state = { showAbout: false };
