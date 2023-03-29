@@ -15,7 +15,7 @@ import b from "../assects/carosalImages/b.jpg";
 import c from "../assects/carosalImages/c.jpg";
 import d from "../assects/carosalImages/d.jpg";
 
-class Home extends Component {
+export class Home extends Component {
   state = { showAbout: false };
   render() {
     const { showAbout } = this.state;
@@ -104,4 +104,13 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export class Cons extends Component{
+render(){
+  return(
+  <div>
+    <h1>Site is Under Construction</h1>
+    <p>Will be available very Shortly</p>
+    </div>
+  )
+}
+}
