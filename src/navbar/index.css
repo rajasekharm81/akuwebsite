@@ -18,10 +18,14 @@
 }
 
 .listItem:hover{
-    color: blue;
+    color: #000077;
 }
 
 .smNavItemsContainer{
     display: absolute;
     top: 0;
+}
+
+.hoveredDrop{
+    background-color: #dff3ff;
 }

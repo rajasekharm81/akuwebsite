@@ -4,38 +4,47 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./landingPage";
 import Vc from "./Abouts";
+import Welcome from "./welcome";
 import {
   History,
   UniversityAct,
   Administration,
   AffliatedColleges,
+  VisionAndMission,
 } from "./AboutUs";
 
 import { Contact } from "./contact";
+
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route exact path="aboutUs/governingBody" element={<Vc />} />
-          <Route exact path="aboutUs/history" element={<History />} />
+          <Route path="/" element={<Welcome />} />
+          <Route path="/home" element={<Home />} />
+          <Route exact path="/home/aboutUs/governingBody" element={<Vc />} />
+          <Route exact path="/home/aboutUs/history" element={<History />} />
           <Route
             exact
-            path="aboutUs/UniversityAct"
+            path="/home/aboutUs/UniversityAct"
             element={<UniversityAct />}
           />
           <Route
             exact
-            path="aboutUs/Administration"
+            path="home/aboutUs/Administration"
             element={<Administration />}
           />
           <Route
             exact
-            path="aboutUs/affliatedColleges"
+            path="home/aboutUs/affliatedColleges"
             element={<AffliatedColleges />}
           />
-          <Route exact path="contact" element={<Contact />} />
+          <Route exact path="/home/contact" element={<Contact />} />
+          <Route
+            exact
+            path="home/aboutUs/Vision&Mission"
+            element={<VisionAndMission />}
+          />
           <Route
             path="*"
             element={

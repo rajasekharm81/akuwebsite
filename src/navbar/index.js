@@ -3,7 +3,8 @@ import { Navigate } from "react-router-dom";
 // import { GiHamburgerMenu } from "react-icons/gi";
 import "./index.css";
 
-import logob from "../assects/logob.jpg";
+// import logob from "../assects/logob.jpg";
+import logoa from "../assects/logoa.jpg";
 
 const navItems = [
   {
@@ -152,11 +153,11 @@ export default class Navbar extends Component {
       case "Administration":
         return <Navigate to="aboutUs/Administration" />;
       case "Affiliated Colleges":
-        return <Navigate to="aboutUs/affliatedColleges" />;
+        return <Navigate to="/home/aboutUs/affliatedColleges" />;
       case "Home":
         return <Navigate to="/" />;
       case "Contact":
-        return <Navigate to="/contact" />;
+        return <Navigate to="/home/contact" />;
       default:
         return null;
     }
@@ -168,15 +169,15 @@ export default class Navbar extends Component {
       <>
         {this.navigator()}
         <nav
-          className="d-flex flex-row bg-dark text-white justify-content-between col-12"
-          style={{ height: "7vw" }}>
-          <div>
-            <img src={logob} alt="logo" style={{ height: "100%" }} />
+          className="d-flex flex-row bg-white text-white justify-content-between"
+          style={{ boxShadow: "1px 1px 350px 0px blue", width: "99vw" }}>
+          <div className="d-flex justify-content-center align-items-center col-xl-5">
+            <img src={logoa} alt="logo" style={{ width: "100%" }} />
           </div>
-          <div>
-            <ul className="col-10 d-flex justify-content-end p-0 ml-auto flex-row align-items-center">
+          <div className="d-flex flex-column ">
+            <ul className="d-flex justify-content-end p-0 ml-auto flex-row align-items-center">
               {TopNav.map((each) => (
-                <h5
+                <button
                   onClick={
                     each.dropItems.length === 0
                       ? () => {
@@ -186,8 +187,8 @@ export default class Navbar extends Component {
                   }
                   className={
                     hoveredId === each.mh
-                      ? "navitem text-primary bg-white p-1"
-                      : "p-1 btn"
+                      ? "d-flex flex-row justify-content-center align-items-centre border-0 navitem text-white bg-primary rounded"
+                      : " navitem text-dark border-0 bg-white"
                   }>
                   <p id={each.mh} onMouseOver={this.hover}>
                     {each.mh}
@@ -196,7 +197,7 @@ export default class Navbar extends Component {
                     <ul
                       className={
                         hoveredId === each.mh
-                          ? "d-block hoveredDropDown badge text-left"
+                          ? "d-block hoveredDropDown badge text-left mt-5"
                           : "d-none"
                       }
                       style={{ zIndex: 1 }}
@@ -204,32 +205,32 @@ export default class Navbar extends Component {
                       {each.dropItems.map((subeach) => (
                         <li
                           onClick={this.Takenav}
-                          className="listItem p-1 "
+                          className="listItem p-1"
                           id={subeach}>
                           - {subeach}
                         </li>
                       ))}
                     </ul>
                   ) : null}
-                </h5>
+                </button>
               ))}
             </ul>
-            <ul className="col-10 d-flex justify-content-end p-0 ml-auto flex-row align-items-center">
+            <ul className="d-flex justify-content-end p-0 ml-auto flex-row align-items-end flex-wrap">
               {navItems.map((each) => (
                 <li
                   className={
                     hoveredId === each.mh
-                      ? "navitem badge text-primary bg-white"
-                      : "badge"
+                      ? "navitem  text-white bg-primary"
+                      : " text-dark"
                   }>
-                  <p id={each.mh} onMouseOver={this.hover}>
+                  <p className="badge" id={each.mh} onMouseOver={this.hover}>
                     {each.mh}
                   </p>
                   <ul
                     className={
                       hoveredId === each.mh
-                        ? "d-block hoveredDropDown text-left"
-                        : "d-none"
+                        ? "d-block hoveredDropDown badge text-left"
+                        : "d-none badge"
                     }
                     style={{ zIndex: 1 }}
                     onMouseLeave={this.unhover}>

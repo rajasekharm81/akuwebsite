@@ -1,12 +1,13 @@
 import { Component } from "react";
 
 import act41991 from "../assects/act41991.pdf";
+// import "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap";
 
 export class History extends Component {
   render() {
     return (
       <div className="d-flex flex-column mt-5 justify-content-center align-items-center col-12">
-        <div className=" text-white col-11">
+        <div className=" text-dark col-11">
           <h1
             className="text-center mb-3"
             style={{ color: "#9900ff", fontFamily: "Georgia" }}>
@@ -46,13 +47,58 @@ export class History extends Component {
   }
 }
 
+export class VisionAndMission extends Component {
+  render() {
+    return (
+      <div className="d-flex flex-column justify-content-center align-items-center h-100 col-12 mt-5 mb-5">
+        <div className="col-12 col-md-10 ">
+          <h1
+            className="text-center bg-info p-5"
+            style={{ fontFamily: "Merriweather" }}>
+            Vision And Mission
+          </h1>
+          <p className="text-align-justify">
+            {" "}
+            The Vision and Mission statements of the Ongole University reflect
+            our determination to assiduously pursue and achieve our goals .The
+            University is committed to continue to be at the forefront of
+            providing the best tertiary education to our students and acting as
+            a catalyst in shaping a bright and sustainable future of our nation
+            by acting as a bridge between the University community and the
+            community at large{" "}
+          </p>
+          <h6>Vision :</h6>
+          <p className="text-align-justify">
+            {" "}
+            To provide internationally comparable quality higher education and
+            nurture teachers of tomorrow with the transformative knowledge
+            focusing upon the integral development of teachers and secular
+            ideals of the nation . The vision is not only focused on imparting
+            subject knowledge and skills , but also to mould the students with
+            better conduct and character committed to the social needs and
+            national development.
+          </p>
+          <h6>Mision :</h6>
+          <p className="text-align-justify">
+            To foster all-round development and excellence through multi-faceted
+            education and sustained engagement with local, national and global
+            communities, providing quality teacher education ,nurture lifelong
+            inspired learners and make colleges of education excel through
+            innovative teaching ,research and extension activities
+          </p>
+        </div>
+      </div>
+    );
+  }
+}
+
 export class UniversityAct extends Component {
   state = { showPdf: false };
   render() {
     return (
       <>
-        <div className="text-white d-flex flex-column justify-content-center align-items-center col-12 p-5">
-          <div className="col-10 text-center">
+        <div className="text-dark d-flex flex-column justify-content-center align-items-center col-12 p-5">
+          <div className="col-12 col-md-10 text-center">
             <h1 className="mb-5">THE ANDHRA PRADESH UNIVERSITIES ACT, 1991</h1>
             <h5>(Act No.4 0/1991)</h5>
             <strong>
@@ -104,7 +150,7 @@ export class UniversityAct extends Component {
               //   this.setState((prevState) => ({ showPdf: !prevState.showPdf }))
               // }
 
-              className="btn">
+              className="btn btn-info">
               Click here for More Information
             </button>
           </a>
@@ -119,7 +165,7 @@ export class UniversityAct extends Component {
 export class Administration extends Component {
   render() {
     return (
-      <div className="text-white p-5">
+      <div className="text-dark p-5">
         <h1 className="mb-5">University Administration</h1>
         <h5>Vice Chancellor - Prof. M. Anji Reddy</h5>
         <h5>Registrar - Prof. B. Hari Babu</h5>
@@ -147,7 +193,7 @@ export class Administration extends Component {
 export class AffliatedColleges extends Component {
   render() {
     return (
-      <div className="text-white p-5">
+      <div className="text-dark p-5">
         <h3 className="mb-3">College Categories</h3>
         <h5>UG Colleges</h5>
         <h5>PG Colleges</h5>

@@ -12,7 +12,7 @@ export default class Vc extends Component {
   aboutVc = () => {
     return (
       <div
-        className="d-flex flex-column justify-content-start text-center align-items-center text-light"
+        className="d-flex flex-column justify-content-start text-center align-items-center text-dark"
         style={{ height: "100vh" }}>
         <img
           draggable="false"
