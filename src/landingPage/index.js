@@ -107,7 +107,7 @@ export class Home extends Component {
 export class Cons extends Component{
 render(){
   return(
-  <div>
+  <div className="text-white" style={{display:"flex",height:"100vh",width:"100vw", flexDirection:"column", justifyContent:'center',alignItems:"center"}}>
     <h1>Site is Under Construction</h1>
     <p>Will be available very Shortly</p>
     </div>
