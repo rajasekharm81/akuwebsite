@@ -15,3 +15,6 @@ code {
 li{
     list-style: none;
 }
+p{
+  text-align: justify;
+}

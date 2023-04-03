@@ -3,6 +3,11 @@ import { Component } from "react";
 import act41991 from "../assects/act41991.pdf";
 // import "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap";
 
+import location from "../assects/location.jpg";
+import prakasamMap from "../assects/prakasamMap.jpg";
+
+import logob from "../assects/logob.jpg";
+
 export class History extends Component {
   render() {
     return (
@@ -58,7 +63,6 @@ export class VisionAndMission extends Component {
             Vision And Mission
           </h1>
           <p className="text-align-justify">
-            {" "}
             The Vision and Mission statements of the Ongole University reflect
             our determination to assiduously pursue and achieve our goals .The
             University is committed to continue to be at the forefront of
@@ -69,7 +73,6 @@ export class VisionAndMission extends Component {
           </p>
           <h6>Vision :</h6>
           <p className="text-align-justify">
-            {" "}
             To provide internationally comparable quality higher education and
             nurture teachers of tomorrow with the transformative knowledge
             focusing upon the integral development of teachers and secular
@@ -85,6 +88,55 @@ export class VisionAndMission extends Component {
             communities, providing quality teacher education ,nurture lifelong
             inspired learners and make colleges of education excel through
             innovative teaching ,research and extension activities
+          </p>
+        </div>
+        <div className="col-12 col-md-10 ">
+          <h5>OUR EMBLEM</h5>
+          <div className="d-flex justify-content-center align-items-center">
+            <img className="col-6 col-md-4" src={logob} alt="emblem" />
+          </div>
+          <p>
+            The crest and the motto adopted by the Acharya Nagarjuna University
+            represent the creative essence of Indian culture oriented to the
+            contemporary aspirations. The symbolism is based on the concept that
+            all human excellence proceeds from truth and culminates in truth.
+            The individual symbols in the crest are emblematically related to
+            one another so as to suggest the upward evolution of the life force
+            from material plenitude and manifest reality towards spiritual
+            magnificence and universal consciousness. The young initiated into
+            knowledge at the University shall achieve identity, growth,
+            self-differentiation and fulfillment in the various ascensions of
+            intellectual and spiritual states shown in the symbolic scheme of
+            the crest. The vase of plenty (PURNA-GHATA) is a prototype from the
+            Amaravati sculpture of the early centuries of the Christian era. It
+            stands for material prosperity on the one hand and objective
+            knowledge on the other. Its traditional attributes are sasya
+            (fertility), santana (increase), sampat (prosperity) and samriddhi
+            (plenitude). The vase is also a paradigmatic representation of the
+            Universe and the creative cycle according to ancient Indian
+            scriptures. Its face is Vishnu, the sustainer; its neck is Rudra,
+            the apocalyptic transformer; its base is Brahma, the creator.
+            Arising out of the superabundant water of life sprouting from purna
+            ghata and transcending the mundane level, illuminated by the
+            resplendent halo of the Sun, is the freshly blossoming Lotus. The
+            pool of waters (manasa sarovara) symbolizes the creative. On the
+            apex are the dharma-chakra and the Lotus representing the creative
+            readiness of the mind to respond to the summons of the creative
+            evolution symbolized by the solar orb.
+          </p>
+          <p>
+            On the apex are the dharma-chakra (the wheel of eternal law) flanked
+            by harinas (deer), overarched by the visva-padma (the cosmic Lotus)
+            flanked by makaras (symbols of the cosmic consciousness). The dharma
+            chakra is reminiscent not only of rita but also of the Buddhas
+            promulgation of the law (dharma chakrapravartana). The deers, too,
+            have a two-fold connotation. On the one had, they represent
+            beautitude, and on the other, the highest point of universal
+            consciousness. The motto, Satye Sarvam Pratishtitam is an
+            epigrammatic representation of the entire symbolism of the crest. It
+            is singularly appropriate to the ideals and functions of the
+            University which is dedicated to the pursuit of truth which is the
+            ultimate abode of all.
           </p>
         </div>
       </div>
@@ -194,10 +246,102 @@ export class AffliatedColleges extends Component {
   render() {
     return (
       <div className="text-dark p-5">
-        <h3 className="mb-3">College Categories</h3>
-        <h5>UG Colleges</h5>
-        <h5>PG Colleges</h5>
-        <h5>Professional Course Colleges</h5>
+        <p>
+          University has got over 450 affiliated colleges in Krishna, Guntur and
+          Prakasam Districts. Details of the colleges
+        </p>
+        <p>
+          Acharya Nagajuna University since then has grown into a large
+          University with 39 Academic Departments, including several
+          self-financed courses, which started operating since 1992. Its
+          jurisdiction was extended to three districts now having over 450
+          affiliated colleges offering Under-Graduate, Post-Graduate,
+          Engineering, Education, Law, Pharmacy and Oriental Languages courses.
+          Now it has 39 Post-graduate teaching-cum-research courses on the
+          campus, while 71 affiliated colleges offered P.G. courses. The
+          University runs two P.G. centers-one at Ongole (a fully self-financed
+          center) and another at Nuzvid (aided).
+        </p>
+        <p>
+          The University has been continuously achieving progress during these
+          30 years, in terms of introducing new subjects in the University
+          College. For instance, two new P.G. courses, in Hindi, and Tourism &
+          Travel management were introduced last year. New courses were started
+          from the academic year: B.P. Ed. and M.P. Ed in the department of
+          Physical Education, while M.B.A. in Health Administration, M. Ed in
+          the department of Education and M.Sc. in Medical Technology are
+          jointly awarded by A.N.U. and N.T.R. University of Health Sciences.
+          Five year Integrated M.B.A., Programme in International Finance is
+          started. This University has also pioneered the introduction of
+          self-financed courses in the country, which is in conformity with the
+          thinking of the national education policy makers such as the
+          University Grants Commission. The University is making concerted
+          efforts towards resource mobilization on different fronts.
+        </p>
+        <p>
+          The policy of the University is to encourage the University College
+          and the affiliated colleges to introduce job-oriented courses at the
+          Degree and Post-Graduate levels. Academic autonomy was extended to
+          four of the colleges as per the directions of the University Grants
+          Commission, New Delhi. The University has ensured that, while there is
+          a need for quantitative improvement with the increasing demand for
+          higher education, from the community at large, the quality of
+          education offered at various levels is also maintained at a high
+          level. The University has been striving to maintain high academic
+          standards in consonance with quantitative increase in the number of
+          students being enrolled every year.
+        </p>
+        <p>
+          Teaching and Research are the two eyes and twin goals of the faculty
+          in the University College. The research programmes carried out in the
+          various Departments cover both fundamental and applied areas. The
+          academic Departments seek to find a reasonable and useful balance
+          between the world of knowledge and its use and application in a more
+          concrete and realizable form. The research programmes and course
+          content focus on these issues and attempt to find solutions, so that
+          feedback obtained by such an interaction could be used to bridge the
+          gap between learning and its utility value.
+        </p>
+        <p>
+          The Humanities and Social Sciences Departments in the Campus have been
+          engaged in the task of studying the many socio-economic problems.
+          Besides general areas, the research projects also cover a study of the
+          problems of women, the oppressed classes of the society (both social
+          and economic) and the problems of governance. The interaction between
+          the funding agencies and their beneficiaries and the managerial
+          problems in industries form other research pre-occupations of the
+          University. The need for providing legal advice to the needy is
+          winning the attention of the researchers.
+        </p>
+        <p>
+          The Science Departments are engaged in carrying out work related to
+          the growing scientific knowledge in solving the problems of society,
+          like the study of pollution hazards and their prevention during
+          development by isolating and characterizing the active principles from
+          both floral and microbial sources; finding alternative energy sources,
+          development of new varieties and hybrids in chilies, computer
+          applications and software development augmenting and preserving fuel
+          supplies and other bio-mass sources, defense research, exploring
+          non-conventional energy sources, aquaculture development, liquid
+          crystals preparation and study of their physical properties,
+          microbiology and psychopathology, etc., all of which have a bearing on
+          the day-to-day problems of society. Knowledge is thus not merely an
+          end in itself but also a means to serve the society which funds the
+          educational institutions and this practical side has not been ignored
+          by the University. Emphasis on research, especially with a strong
+          socio-economic bias has also made the University initiate schemes and
+          projects of practical utility.
+        </p>
+        <h5 style={{ textDecoration: "underline" }}>Location:- </h5>
+        <div className=" d-flex col-12 justify-content-center align-self-center">
+          <img className="col-10" src={location} alt="location" />
+        </div>
+        <h5 className=" mt-4" style={{ textDecoration: "underline" }}>
+          Territorial jurisdiction
+        </h5>
+        <div className=" d-flex col-12 justify-content-center align-self-center">
+          <img className="col-9" src={prakasamMap} alt="location" />
+        </div>
       </div>
     );
   }
