@@ -169,7 +169,7 @@ export default class Vc extends Component {
           {tableContent.map((each, index) => (
             <tr
               style={
-                index % 2 == 0
+                index % 2 === 0
                   ? { backgroundColor: "white" }
                   : { backgroundColor: "#bccef0" }
               }>
